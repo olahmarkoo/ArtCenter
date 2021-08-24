@@ -1,0 +1,272 @@
+#appointmentSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bluredBackGround{
+    height: 82%;
+    width: 92%;
+
+    background-color: rgb(58, 58, 58); /* Fallback color */
+    background-color: rgba(58, 58, 58, 0.4); /* Black w/opacity/see-through */
+    -webkit-filter: blur(8px);
+}
+.inputContainer input:not(.appointSubmit){
+    border: none;
+    width: 88%;
+}
+.inputContainer input:focus{
+    outline: none;
+}
+.inputContainer select:focus{
+    outline: none;
+}
+
+.appointmentContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.appointmentFormContainer{
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.appointmentHeader{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.appointmentHeaderTitle{
+    font-size: 3em;
+}
+.appointmentHeaderSubTitle{
+    font-size: 2em;
+}
+
+.appointmentForm{
+    width: 90%;
+    height: 80%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-right: solid white 2px;
+}
+
+
+
+.inputContainer{
+    border-radius: 20px !important;
+    background-color: white;
+    width: 40%;
+    height: 40px;
+    display: flex;
+}
+.inputContainer input{
+    border-radius: 20px !important;
+}
+.appointFormName{
+    width: 90%;
+    margin: 30px 0px;
+}
+
+
+
+.appointFormSecond{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px 0px;
+}
+.appointFormSecond .inputContainer{
+    margin-bottom: 30px;
+    width: 45%
+}
+.appointFormSecond input:nth-child(1){
+    padding-left: 10%;
+    padding-right: 0;
+}
+.appointFormSecond input:nth-child(3){
+    padding-left: 10%;
+    padding-right: 0;
+}
+.appointFormSecond .inputContainer:nth-child(2){
+    margin-left: 10%;
+}
+.appointFormSecond .inputContainer:nth-child(4){
+    margin-left: 10%;
+}
+
+
+
+
+.appointFormThird{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px;
+}
+.appointFormThird .inputContainer{
+    width: 30%;
+    margin: auto;
+}
+.appointButton{
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: calibri;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+.appointButton:hover{
+    background-color:  rgb(231,76,60);
+    transition: all ease 0.3s;
+}
+.appointSubmit{
+    transition: 0.3s;
+    margin: 0;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    border-radius: 20px;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.appointSubmit:hover{
+    color: white;
+}
+
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.inputContainer select{
+    border: none;
+    border-radius: 20px !important;
+    width: 88%;
+}
+
+
+
+
+
+
+.appointmentAlternativesContainer{
+    height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.alternatives{
+    width: 80%;
+    border-bottom: 2px white solid;
+    display: flex;
+    justify-content: left;
+}
+.alternatives:nth-child(1){
+    border-bottom: none;
+}
+
+
+
+@media (max-width: 1000px) {
+    .appointmentContainer{
+        flex-direction: column;
+    }
+    .appointmentFormContainer{
+        height: 50%;
+        width: 90%;
+        align-items: center;
+    }
+    .appointmentHeader{
+        width: 90%;
+        height: 10%;
+        align-items: center;
+    }
+    .appointmentHeaderTitle{
+        font-size: 2em;
+    }
+    .appointmentHeaderSubTitle{
+        display: none;
+    }
+    .appointmentForm{
+        height: 90%;
+        margin-top: 30px;
+        display: block;
+        border-right: none;
+    }
+    .appointFormName{
+        width: 100%;
+        margin: auto;
+    }
+    .appointFormSecond{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin:auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .appointFormSecond .inputContainer{
+        margin-bottom: 20px;
+        width: 100%
+    }
+
+    .appointFormSecond .inputContainer:nth-child(2){
+        margin-left: 0;
+    }
+    .appointFormSecond .inputContainer:nth-child(4){
+        margin-left: 0;
+    }
+    .appointmentAlternativesContainer{
+        max-height: 20%;
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    .appointFormThird{
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .appointButton{
+        width: 100%;
+        height: 50px;
+    }
+    .appointSubmit{
+        width: 100%;
+    }
+    .appointFormThird .inputContainer{
+        width: 80%;
+    }
+}

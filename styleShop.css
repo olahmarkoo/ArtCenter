@@ -1,0 +1,222 @@
+
+.containerShop{
+    width: 1100px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+}
+.containerSort{
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.containerSort input{
+    display: none;
+}
+.fa-sort{
+    margin: 10px;
+}
+.containerSort .sort{
+    transition: 0.5s;
+    width: 120px;
+    height: 40px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 300;
+    color: black;
+}
+.containerSort .sort:hover{
+    background-color:white;
+    color: rgb(231,76,60);
+}
+.sortSelectBox{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 1em;
+}
+.containerSort select{
+    height: 30px;
+    padding: 0px 15px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.containerProduct{
+    margin:0px;
+    padding: 0px;
+    height: 80%;
+    width: 70%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.container a{
+    text-decoration: none;
+}
+.containerProduct .box{
+    flex: 0 0 auto;
+    width: 200px;
+    margin-left: 50px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.slide-img{
+    height: 300px;
+    position: relative;
+}
+.slide-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0px 0px;
+}
+.detail-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 0px 0px 10px 10px;
+}
+.type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+.type a{
+    font-size: 0.8rem;
+}
+.detail-box a{
+    color:#222222;
+    margin: 10px 10px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.type span{
+    color: rgba(26,26,26,0.5);
+}
+.price{
+    color: #333333;
+    font-weight: bold;
+    font-family: poppins;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+.overlay{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background-color:  rgb(233, 106, 92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buy-btn{
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: calibri;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+.buy-btn:hover{
+    color: #FFFFFF;
+    background-color:  rgb(231,76,60);
+    transition: all ease 0.3s;
+}
+.overlay{
+    visibility: hidden;
+}
+.slide-img:hover .overlay{
+    visibility: visible;
+    animation: fade 0.5s;
+}
+
+.containerProduct::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    display: initial;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background:  white;
+        border-radius: 10px;
+        }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background:  white;
+    }
+
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .containerShop{
+        flex-direction: column;
+    }
+    .containerSort{
+        margin-top: 80px;
+        width: 90%;
+        height: 40%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .containerProduct{
+        height: 50%;
+        width: 90%;
+        overflow-x: scroll;
+    }
+    .containerProduct .box{
+        width: 240px;
+        margin-left: 50px;
+    }
+}
+
+
+

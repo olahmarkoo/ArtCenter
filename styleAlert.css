@@ -1,0 +1,51 @@
+.success{
+    display: none;
+}
+.error{
+    display: none;
+}
+.alertBox{
+    width: 500px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 20px black;
+    border: 2px black solid;
+    border-radius: 8px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99999999;
+    padding: 10px;
+    text-align: center;
+}
+.success span{
+    color: chartreuse;
+    font-size: 40px;
+    display: block;
+    margin: 20px 0;
+}
+.error span{
+    color: red;
+    font-size: 40px;
+    display: block;
+    margin: 20px 0;
+}
+.alertBox h1{
+    color: #333;
+}
+.alertBox .close{
+    margin: 20px 0;
+    font-size: 20px;
+    color: white;
+    padding: 10px 30px;
+    background: #3498db;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+@media (max-width: 550px) {
+    .alertBox{
+        width: 100%;
+    }
+}

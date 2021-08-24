@@ -1,0 +1,155 @@
+.container .section #header{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#menuBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+}
+
+.menuLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+    position: relative;
+}
+
+.menuButton::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 0s;
+    z-index: -1;
+}
+.menuButton:hover::before{
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 0s;
+    z-index: -1;
+}
+
+
+
+
+#artCenterLogo{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+#options{
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mobileOptions{
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contentBox{
+    height: 100vh;
+}
+.mainText{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 6em;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 5px 10px rgba(0,0,0,1);
+    mix-blend-mode: overlay;
+}
+.companyDescription{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    font-size: 1.6em;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0,0,0,1);
+}
+.scrollText{
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 1200px) {
+    .mainText{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .title{
+        width: 90%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        font-size: 6em;
+    }
+    .companyDescription{
+        width: 90%;
+        height: 50%;
+        text-align: center;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 550px) {
+    .title{
+        width: 90%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        font-size: 3.6em;
+    }
+}

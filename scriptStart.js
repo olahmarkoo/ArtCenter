@@ -1,0 +1,42 @@
+pageStart();
+
+function pageStart() {
+    sorting();
+    dateToday();
+    document.getElementById("succesAlert").addEventListener("click",closeAlert);
+    document.getElementById("errorAlert").addEventListener("click",closeAlert);
+    document.getElementById("passwordToEmail").addEventListener("click",passwordToEmail);
+    document.getElementById("appointButton").addEventListener("click",insertAppointment);
+    document.getElementById("signIn").addEventListener("click",signIn);
+    document.getElementById("logIn").addEventListener("click",logIn);
+    document.getElementById("logOut").addEventListener("click",logOut);
+    document.getElementById("mobileMenuAction").addEventListener("click",mobileMenuToggle);
+    document.getElementById("mobileMenuOne").addEventListener("click",mobileMenuClose);
+    document.getElementById("mobileMenuTwo").addEventListener("click",mobileMenuClose);
+    document.getElementById("mobileMenuThree").addEventListener("click",mobileMenuClose);
+    document.getElementById("mobileMenuFour").addEventListener("click",mobileMenuClose);
+    document.getElementById("menuToggleAction").addEventListener("click",menuToggle);
+    document.getElementById("modalToggleAction").addEventListener("click",modalToggle);
+    document.getElementById("menuCloseAction").addEventListener("click",menuClose);
+    document.getElementById("orderToggleAction").addEventListener("click",orderToggle);
+    document.getElementById("orderMenuCloseAction").addEventListener("click",orderMenuClose);
+    document.getElementById("otherLogin1").addEventListener("click",openLogin);
+    document.getElementById("otherLogin2").addEventListener("click",openLogin);
+    document.getElementById("otherSignin1").addEventListener("click",openSignin);
+    document.getElementById("otherSignin2").addEventListener("click",openSignin);
+    document.getElementById("otherPassword1").addEventListener("click",openPassword);
+    document.getElementById("otherPassword2").addEventListener("click",openPassword);
+    document.getElementById("dataModify").addEventListener("click",openDataModify);
+    document.getElementById("dataMenuCloseAction").addEventListener("click",dataMenuClose);
+    document.getElementById("dataModifyButton").addEventListener("click",dataModify);
+    document.getElementById("orderSave").addEventListener("click",orderSave);
+    document.getElementById("theProductRadiosSize").addEventListener("click",priceChanges);
+    document.getElementById("theProductRadiosMaterial").addEventListener("click",priceChanges);
+    document.getElementById("buyButton").addEventListener("click",addProductToOrder);
+    document.getElementById("productBack").addEventListener("click",backToShop);
+    document.getElementById("osszesButton").addEventListener("click",osszesCheck);
+    document.getElementById("tajkepButton").addEventListener("click",tajkepCheck);
+    document.getElementById("portreButton").addEventListener("click",portreCheck);
+    document.getElementById("architektúraButton").addEventListener("click",architekturaCheck);
+    document.getElementById("sorting").addEventListener("click",sorting);
+}

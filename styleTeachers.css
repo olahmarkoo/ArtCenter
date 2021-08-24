@@ -1,0 +1,113 @@
+#teacherSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.teacherContainer{
+    position: absolute;
+    display: flex;
+    height: calc(100% - 200px);
+    width: calc(100% - 200px);
+}
+.teacherContainer .teacherBox{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.teacherContainer .teacherBox:last-child{
+    margin-right: none;
+}
+.teacherContainer .teacherBox .teacherImgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    opacity: 0.5;
+    filter: grayscale(1);
+    border-radius: 20px;
+}
+.teacherContainer .teacherBox .teacherImgBox:hover{
+    opacity: 1;
+    filter: grayscale(0);
+}
+.teacherContainer .teacherBox .teacherImgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.teacherTextBox{
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.teacherName{
+    font-weight: 600;
+    margin: 10px 20px;
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.teacherDescription{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.teacherDescription:hover{
+    opacity: 1;
+}
+.teacherProfession{
+    position: absolute;
+    left: 0;
+    bottom: 200px;
+    margin: 10px 20px;
+}
+.teacherText{
+    position: absolute;
+    font-size: 1.2em;
+    left: 0;
+    bottom: 0;
+    margin: 10px 20px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .teacherContainer{
+        flex-direction: column;
+        height: calc(100% - 100px);
+        width: calc(100% - 100px);
+    }
+    .teacherContainer .teacherBox{
+        width: 100%;
+        height: 25%;
+        margin-bottom: 10px;
+    }
+    .teacherContainer .teacherBox:last-child{
+        margin-bottom: none;
+    }
+    .teacherProfession{
+        font-size: 1.1em;
+        bottom: 40px;
+    }
+    .teacherText{
+        font-size: 0.9em;
+    }
+}
